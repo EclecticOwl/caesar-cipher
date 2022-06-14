@@ -1,5 +1,9 @@
 import pyperclip as pc
 
+def wipe():
+    print("\033c", end='')
+
+
 def cipher_text():
     text_input = input('Gimme a sentence to cipher: \n\n>>> ')
     shift_amount = input('Number please: \n\n>>> ')
@@ -17,7 +21,7 @@ def cipher_text():
     print(f'Ciphered using ROT{shift_amount}')
 
 
-    confirmation = input("Would you like to copy to clipboard?\n Please enter yes or y")
+    confirmation = input("Would you like to copy to clipboard?\n Please enter yes or y\n")
     if confirmation == 'yes' or 'y':
         pc.copy(cipher)
         print('Text copied to clipboard.')
@@ -37,20 +41,25 @@ def decipher_text():
 
 
 def menu():
-    print('\n1: Cipher text')
-    print('2: Decipher text')
-    print('3: Exit program')
-    choice = input('\nPlease choose a number based off of the options provided above:\n\n>>> ')
+    print('Menu options:')
+    print('\n1: Cipher text\n')
+    print('2: Decipher text\n')
+    print('3: Exit program\n\n')
+    choice = input('\nPlease choose a menu option based off of the numbers above:\n\n>>> ')
 
     if choice == '1':
+        wipe()
         cipher_text()
     elif choice == '2':
+        wipe()
         decipher_text()
     elif choice == '3':
+        wipe()
         print('\nExiting program.')
         return
     else:
-        print('\nNot an option. Let us try this again.')
+        wipe()
+        print('\nNot an option. Let us try this again.\n')
         menu()
 
 menu()
