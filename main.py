@@ -26,6 +26,10 @@ def cipher_text():
     text_input = input('Gimme a sentence to cipher: \n\n>>> ')
     shift_amount = input('Number please: \n\n>>> ')
 
+    if not shift_amount.isnumeric():
+        print('No cake for you! Only numbers')
+        cipher_text()
+
     cipher = []
     for i in text_input:
         ordinal_code = ord(i) + int(shift_amount)
@@ -38,7 +42,6 @@ def cipher_text():
     print(f'Ciphered text is: {cipher}')
     print(f'Ciphered using ROT{shift_amount}')
 
-
     confirmation = input("\nWould you like to copy to clipboard?\nPlease enter yes or y:\n\n>>> ")
     if confirmation == 'yes' or 'y':
         pc.copy(cipher)
@@ -47,6 +50,10 @@ def cipher_text():
 def decipher_text():
     text_input = input('Gimme a sentence to decipher: \n\n>>> ')
     shift_amount = input('Number please: \n\n>>> ')
+
+    if not shift_amount.isnumeric():
+        print('No cake for you! Only numbers')
+        cipher_text()
 
     plain = []
     for i in text_input:
