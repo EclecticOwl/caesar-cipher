@@ -8,14 +8,11 @@ def cipher_text():
         letter_code = chr(ordinal_code)
         cipher.append(letter_code)
         
-    
-    print(cipher)
     cipher = ''.join(cipher)
-    print(cipher)
 
-    # print(f'Plain text is: {text_input}')
-    # print(f'Ciphered text is: {cipher}')
-    # print(f'Ciphered using ROT{shift_amount}')
+    print(f'Plain text is: {text_input}')
+    print(f'Ciphered text is: {cipher}')
+    print(f'Ciphered using ROT{shift_amount}')
 
 def decipher_text():
 
@@ -36,7 +33,7 @@ def decipher_text():
 def menu():
     print('1: Cipher text')
     print('2: Decipher text')
-    choice = input('Please choose a number based off of the options provided above: \n\n')
+    choice = input('\nPlease choose a number based off of the options provided above: \n\n')
 
     if choice == '1':
         cipher_text()
@@ -47,5 +44,4 @@ def menu():
 
 
 
-
-decipher_text()
+menu()
