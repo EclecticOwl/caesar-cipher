@@ -33,6 +33,21 @@ def decipher_text():
     print(f'Plain text is: {plain}')
 
 
+def menu():
+    print('1: Cipher text')
+    print('2: Decipher text')
+    choice = input('Please choose a number based off of the options provided above: \n\n')
+
+    if choice == '1':
+        cipher_text()
+    elif choice == '2':
+        decipher_text()
+    else:
+        print('That is not a valid choice. \n\nNow exiting function....')
 
 
 
+
+
+
+menu()
