@@ -10,21 +10,21 @@ def rand_reply():
     rando = random.randint(1, 5)
 
     if rando == 1:
-        print('You think it is that easy to break it? Try again!')
+        print('You think it is that easy to break it? Try again!\n')
     elif rando == 2:
-        print('Sorry, champ! Try again.')
+        print('Sorry, champ! Try again.\n')
     elif rando == 3:
-        print('Please listen to the instructions for some cake.')
+        print('Please listen to the instructions for some cake.\n')
     elif rando == 4:
-        print('There are only three options available. No cash prizes.')
+        print('There are only three options available. No cash prizes.\n')
     else:
-        print('You win a prize! The exact same menu!')
+        print('You win a prize! The exact same menu!\n')
 
 # Main Program
 
 def cipher_text():
     text_input = input('Gimme a sentence to cipher: \n\n>>> ')
-    shift_amount = input('Number please: \n\n>>> ')
+    shift_amount = input('Choose a shift amount for the cipher: \n\n>>> ')
 
     if not shift_amount.isnumeric():
         print('No cake for you! Only numbers')
@@ -46,10 +46,10 @@ def cipher_text():
     if confirmation == 'yes' or 'y':
         pc.copy(cipher)
         print('Text copied to clipboard.')
-
+    
 def decipher_text():
     text_input = input('Gimme a sentence to decipher: \n\n>>> ')
-    shift_amount = input('Number please: \n\n>>> ')
+    shift_amount = input('Please enter the required cipher shift amount: \n\n>>> ')
 
     if not shift_amount.isnumeric():
         print('No cake for you! Only numbers')
