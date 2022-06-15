@@ -48,6 +48,8 @@ class CaesarCipher():
         if confirmation == 'yes' or 'y':
             pc.copy(cipher)
             print('Text copied to clipboard.')
+        
+        self.menu()
     
     def decipher_text(self):
         text_input = input('Gimme a sentence to decipher: \n\n>>> ')
@@ -65,6 +67,8 @@ class CaesarCipher():
         
         plain = ''.join(plain)
         print(f'Plain text is: {plain}')
+
+        self.menu()
     
     def menu(self):
         print('Menu options:')
